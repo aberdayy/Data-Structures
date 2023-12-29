@@ -63,15 +63,15 @@ class positionalList(DoublyLinkedBase):
         def __ne___(self,other): # check non equality (!=)
             return not(self==other)
 
-    # utiliy
+     # utiliy
     def _validate(self,param):
         if not isinstance(param, self.Position):
             raise TypeError(f'{param} must be proper Position type')
         if param._container is not self:
             raise ValueError(f'{param} does not belont to this container')
-        if p._node._next is None:
+        if param._node._next is None:
             raise ValueError(f'{param} is no longer valid')
-        return p._node
+        return param._node
 
     def _make_position(self, node):
         if node is self._header or node is self._trailer:

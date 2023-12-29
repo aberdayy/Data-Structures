@@ -42,9 +42,9 @@ class array_queue:
     def enqueue(self,e):
         if (self._size == len(self._data)):
             self._resize(2*len(self._data))
-        available = (self._front + self._size)%len(self._data)
-        self._data[available]  = e
-        self._size +=1
+        available = (self._front + self._size) % len(self._data)
+        self._data[available] = e
+        self._size += 1
 
 q = array_queue()
 print(q.is_empty())

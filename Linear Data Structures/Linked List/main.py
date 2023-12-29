@@ -39,13 +39,17 @@ class LinkedStack:
         return self._size
     def is_empty(self):
         return self._size==0
+
+
     def push(self, e):
         self._head = self.Node(e, self._head)
         self._size += 1
+
     def top(self):
         if self.is_empty():
             raise Empty('Stack is empty')
         return self._head._element
+
     def pop(self):
         if self.is_empty():
             raise Empty('Stack is empty')
@@ -68,11 +72,14 @@ It also sets the _head to the next reference of the node, and decrements the _si
 '''
 
 S = LinkedStack()
-print(S.is_empty())
 
 S.push(21)
 S.push(431)
 S.push(11)
 S.push(76)
 S.push(92)
+print("Cikarmadan onceki top")
+print(S.top())
+S.pop()
+print("Cikardiktan sonraki top")
 print(S.top())

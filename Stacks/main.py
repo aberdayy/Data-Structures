@@ -16,7 +16,6 @@ class array_stack:
 
     def push(self, e):
         self._data.append(e)
-
     def top(self):
         if self.is_empty():
             raise Empty('stack is empty!')
